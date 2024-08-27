@@ -1,0 +1,543 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f4f4f4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #6d4c41; /* Dark brown */
+}
+
+/* Navigation Logo */
+nav .logo img {
+    width: 150px;
+    height: 150px; /* Ensure the logo is a square */
+    border-radius: 50%; /* Make the logo circular */
+    object-fit: cover; /* Ensure the image fits well within the circle */
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #4e342e; /* Darker brown */
+    border-radius: 5px;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #6d4c41;
+    color: #fff;
+    padding: 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+/* Home Page */
+.home-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.home-header h1 {
+    font-size: 2.5rem;
+}
+
+.home-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Featured Products Section */
+.featured-products {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns, 1 row */
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 150px; /* Adjust width for smaller images */
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card a.btn {
+    color: #6d4c41;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.product-card a.btn:hover {
+    text-decoration: underline;
+}
+
+/* Product Selection */
+.product-selection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.product-option {
+    text-align: center;
+    width: 23%;
+}
+
+.product-option img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.product-option span {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Quantity Selector */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-selector button {
+    padding: 0.5rem;
+    border: none;
+    background-color: #6d4c41;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.quantity-selector button:hover {
+    background-color: #4e342e;
+}
+
+.quantity-selector input {
+    width: 50px;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+/* Payment Method */
+.payment-method {
+    margin-top: 1rem;
+}
+
+.payment-method label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Order Summary */
+.order-summary {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.order-summary h3 {
+    margin-bottom: 1rem;
+}
+
+.order-summary p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+
+/* About Us Page */
+.about-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.team-member {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Careers Page */
+.careers-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.careers-header h1 {
+    font-size: 2.5rem;
+}
+
+.careers-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.job-listings {
+    margin-bottom: 2rem;
+}
+
+.job {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.job h3 {
+    font-size: 2rem;
+}
+
+.job p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.apply-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #6d4c41;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.apply-link:hover {
+    text-decoration: underline;
+}
+
+.application-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.application-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.application-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.application-form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.application-form input, .application-form textarea, .application-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.application-form button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #6d4c41;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.application-form button:hover {
+    background-color: #4e342e;
+}
+
+/* Order Online Page */
+.order-online-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.order-online-header h1 {
+    font-size: 2.5rem;
+}
+
+.order-online-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.order-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.order-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.order-form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.order-form input, .order-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.order-form button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #6d4c41;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.order-form button:hover {
+    background-color: #4e342e;
+}
+
+/* Contact Page */
+.contact-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: #6d4c41;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #6d4c41;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #4e342e;
+}
+
+/* Buttons */
+a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #6d4c41; /* Dark brown */
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+a.btn:hover {
+    background-color: #4e342e; /* Darker brown */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    height: 95vh;
+    position: relative;
+}
+
+.hero .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit:fill
+}
+
+.hero .hero-text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    max-width: 500px;
+    z-index: 1;
+}
+
+.hero .hero-text h1 {
+    font-size: 3em;
+}
+
+.hero .hero-text p {
+    font-size: 1.5em;
+}
+
+.hero .hero-text a.btn {
+    background-color: #4e342e;
+    padding: 15px 30px;
+    font-size: 18px;
+}

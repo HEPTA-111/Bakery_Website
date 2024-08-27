@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online - Luca’s Loaves</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Luca’s Loaves Logo" class="logo-img">
+            </div>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="order.html" class="active">Order Online</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="order-online-header">
+            <h1>Order Online</h1>
+            <p>Enjoy the taste of freshly baked bread from the comfort of your home. Choose your favorites and pick them up at your convenience!</p>
+        </section>
+
+        <section class="shopping-cart">
+            <h2>Shopping Cart</h2>
+            <form action="process_order.php" method="post" class="order-form">
+                
+                <!-- Product Selection -->
+                <div class="form-group">
+                    <label for="product">Select Product:</label>
+                    <select id="product" name="product" class="form-control" required>
+                        <option value="white">Sourdough White - $7.00</option>
+                        <option value="rye">Sourdough Rye - $8.00</option>
+                        <option value="spelt">Sourdough Spelt - $9.00</option>
+                        <option value="seeded">Sourdough Seeded - $9.50</option>
+                    </select>
+                </div>
+
+                <!-- Quantity Selection -->
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" class="form-control" required>
+                </div>
+
+                <!-- Pickup Date -->
+                <div class="form-group">
+                    <label for="pickup_date">Pickup Date:</label>
+                    <input type="date" id="pickup_date" name="pickup_date" class="form-control" required>
+                </div>
+
+                <!-- Pickup Time -->
+                <div class="form-group">
+                    <label for="pickup_time">Pickup Time:</label>
+                    <input type="time" id="pickup_time" name="pickup_time" class="form-control" required>
+                </div>
+
+                <!-- Special Instructions -->
+                <div class="form-group">
+                    <label for="instructions">Special Instructions:</label>
+                    <textarea id="instructions" name="instructions" rows="4" class="form-control" placeholder="Any special requests? Let us know here..."></textarea>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <p id="summary-text">Please select a product and quantity to see the summary.</p>
+                </div>
+
+                <!-- Place Order Button -->
+                <div class="form-group">
+                    <input type="submit" value="Place Order" class="btn">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Luca’s Loaves Logo" class="logo-img">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="order.html">Order Online</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <p><strong>Luca’s Loaves</strong></p>
+                <p>123 Bakery Lane, Breadtown, USA</p>
+                <p>Email: <a href="mailto:info@lucasloaves.com">info@lucasloaves.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const productSelect = document.getElementById('product');
+        const quantityInput = document.getElementById('quantity');
+        const summaryText = document.getElementById('summary-text');
+
+        function updateSummary() {
+            const selectedProduct = productSelect.options[productSelect.selectedIndex].text;
+            const quantity = quantityInput.value;
+            summaryText.textContent = `${quantity} x ${selectedProduct}`;
+        }
+
+        productSelect.addEventListener('change', updateSummary);
+        quantityInput.addEventListener('input', updateSummary);
+    </script>
+</body>
+</html>

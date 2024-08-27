@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Luca’s Loaves</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Luca’s Loaves Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="order.html">Order Online</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="careers">
+            <div class="careers-header">
+                <h1>Join Our Team</h1>
+                <p>At Luca’s Loaves, we are passionate about creating exceptional bread and providing an excellent customer experience. We are always looking for dedicated and talented individuals to join our team.</p>
+            </div>
+            <section class="job-listings">
+                <h2>Current Openings</h2>
+                <div class="job">
+                    <h3>Baker</h3>
+                    <p><strong>Location:</strong> Naboo, Maryland</p>
+                    <p><strong>Salary:</strong> $45,000 - $55,000 per year</p>
+                    <p><strong>Job Type:</strong> Full-time</p>
+                    <p><strong>Responsibilities:</strong> Prepare sourdough bread using traditional methods, manage baking schedules, and ensure quality control.</p>
+                    <p><strong>Qualifications:</strong> Minimum 2 years of experience in baking, knowledge of sourdough bread-making, strong attention to detail.</p>
+                    <a href="#apply-form" class="apply-link">Apply Now</a>
+                </div>
+                <div class="job">
+                    <h3>Sales Associate</h3>
+                    <p><strong>Location:</strong> Tatooine, Germany</p>
+                    <p><strong>Salary:</strong> $30,000 - $35,000 per year</p>
+                    <p><strong>Job Type:</strong> Part-time</p>
+                    <p><strong>Responsibilities:</strong> Assist customers with purchases, manage inventory, and provide excellent customer service.</p>
+                    <p><strong>Qualifications:</strong> Excellent communication skills, customer service experience, ability to work flexible hours.</p>
+                    <a href="#apply-form" class="apply-link">Apply Now</a>
+                </div>
+                <div class="job">
+                    <h3>Marketing Specialist</h3>
+                    <p><strong>Location:</strong> Naboo, Maryland</p>
+                    <p><strong>Salary:</strong> $50,000 - $60,000 per year</p>
+                    <p><strong>Job Type:</strong> Full-time</p>
+                    <p><strong>Responsibilities:</strong> Develop marketing strategies, manage social media campaigns, and coordinate with external agencies.</p>
+                    <p><strong>Qualifications:</strong> Bachelor's degree in Marketing or related field, 3+ years of experience, strong analytical skills.</p>
+                    <a href="#apply-form" class="apply-link">Apply Now</a>
+                </div>
+            </section>
+            <section id="apply-form" class="application-form">
+                <h2>Application Form</h2>
+                <form action="/submit_application" method="post" id="jobApplicationForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Position Applied For:</label>
+                        <select id="position" name="position" required>
+                            <option value="baker">Baker</option>
+                            <option value="sales_associate">Sales Associate</option>
+                            <option value="marketing_specialist">Marketing Specialist</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="coverLetter">Cover Letter:</label>
+                        <textarea id="coverLetter" name="coverLetter" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="resume">Resume (PDF only):</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf" required>
+                    </div>
+                    <button type="submit">Submit Application</button>
+                </form>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Luca’s Loaves Footer Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="order.html">Order Online</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <p>Email: <a href="mailto:info@lucasloaves.com.au">info@lucasloaves.com.au</a></p>
+                <p>Telephone: [RTO’s phone number]</p>
+                <p>Address: [RTO’s address]</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
